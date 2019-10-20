@@ -1,0 +1,22 @@
+{
+  "name": "bglist",
+  "version": "1.0.0",
+  "description": "A list of hottest games currently on the market based on user ratings in Boardgame Geek platform",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Boardgames",
+    "boardgamegeek"
+  ],
+  "author": "Justas Gr.",
+  "license": "ISC"
+}

@@ -1,0 +1,30 @@
+html {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+div .container {
+  padding-top: 2em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid;
+  border-color: lightsteelblue;
+  width: auto;
+  padding: 1em 2em;
+}
+
+tr a {
+  display: block;
+}
+
+#rank {
+  width: 3em;
+}

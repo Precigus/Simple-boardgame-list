@@ -40,8 +40,8 @@ tr a {
 }
 
 .contents img {
-  width: 15em;
-  height: 15em;
+  width: auto;
+  height: 20em;
 }
 
 .info {

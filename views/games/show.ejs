@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script src="https://kit.fontawesome.com/4d5de93084.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
-        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/united/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-udHIRBY7G8ZUr7aO8wRn7wD4bsGGRLR5orCz1FV93MZ7232xhAdjDYEvqeZLx45b" crossorigin="anonymous">
-        <title>Hottest Boardgames</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/4d5de93084.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/united/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-udHIRBY7G8ZUr7aO8wRn7wD4bsGGRLR5orCz1FV93MZ7232xhAdjDYEvqeZLx45b" crossorigin="anonymous">
+    <title>Hottest Boardgames</title>
+</head>
+
 <body>
-        <div class="container">
-                <header>
-                    <h1>
-                        <%= game.name %>
-                    </h1>
-                </header>
-    
+    <div class="container">
+        <header>
+            <h1>
+                <%= game.name %>
+            </h1>
+        </header>
+        <div class="contents">
+            <img src="<%= game.thumbnail %>" alt="<%= game.name %>">
+            <div class="info">
+                Game rank: <%= game.rank %>
+            </div>
+            <div class="info">
+                Year published: <%= game.yearPublished %>
+            </div>
+        </div>
+    </div>
+
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -30,4 +42,5 @@
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
     </script>
 </body>
+
 </html>

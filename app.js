@@ -26,7 +26,6 @@ app.get("/games/:id", async function(req, res) {
   let foundGame = (await gamesList).find(function(game) {
     return game.gameId === Number(req.params.id);
   });
-  console.log(typeof req.params.id);
   res.render("games/show", { game: foundGame });
 });
 

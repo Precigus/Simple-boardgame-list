@@ -5,6 +5,11 @@ html {
   padding: 0;
 }
 
+.container {
+  margin-top: 1em;
+  text-align: center;
+}
+
 div .container {
   padding-top: 2em;
 }
@@ -27,4 +32,18 @@ tr a {
 
 #rank {
   width: 3em;
+}
+
+.contents {
+  display: inline-block;
+  text-align: left;
+}
+
+.contents img {
+  width: 15em;
+  height: 15em;
+}
+
+.info {
+  font-size: 1.2em;
 }

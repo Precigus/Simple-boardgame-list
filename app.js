@@ -1,10 +1,16 @@
 require("dotenv").config();
 
 const express = require("express"),
-  fetch = require("node-fetch");
+  fetch = require("node-fetch"),
+  bodyParser = require("body-parser");
 
 let app = express();
 
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
@@ -16,7 +22,6 @@ async function getList() {
   return data;
 }
 
-// const gamesList = getList();
 app.locals.gamesList = getList();
 
 const indexRoutes = require("./routes/index"),

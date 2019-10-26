@@ -16,18 +16,14 @@ async function getList() {
   return data;
 }
 
-const gamesList = getList();
+// const gamesList = getList();
+app.locals.gamesList = getList();
 
-app.get("/", async function(req, res) {
-  res.render("games/index", { games: await gamesList });
-});
+const indexRoutes = require("./routes/index"),
+  gamesRoutes = require("./routes/games");
 
-app.get("/games/:id", async function(req, res) {
-  let foundGame = (await gamesList).find(function(game) {
-    return game.gameId === Number(req.params.id);
-  });
-  res.render("games/show", { game: foundGame });
-});
+app.use("/", indexRoutes);
+app.use("/games", gamesRoutes);
 
 app.get("*", function(req, res) {
   res.send("This page does not exist!");
